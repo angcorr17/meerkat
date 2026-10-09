@@ -14,7 +14,10 @@ export default [
     route("/login", "routes/Login.tsx"),
     route("/account", "routes/Account.tsx"),
     route("/moderation", "routes/Moderation.tsx"),
+    route("/terms", "routes/Terms.tsx"),
+    route("/privacy", "routes/Privacy.tsx"),
     route("/e/:uid/qa", "routes/QnA.tsx"),
     route("/e/:uid/card", "routes/EventCard.tsx"),
+    route("/e/:uid/about", "routes/About.tsx"),
   ]),
 ] satisfies RouteConfig;

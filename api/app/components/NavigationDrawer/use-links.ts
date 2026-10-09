@@ -1,6 +1,6 @@
 import { useMemo } from "react";
 import { useLocation } from "react-router";
-import { card, qa } from "../../routing.ts";
+import { about, card, qa } from "../../routing.ts";
 import type { Event } from "../../types.ts";
 
 export type UseLinksProps = {
@@ -24,6 +24,11 @@ export function useLinks({ event }: UseLinksProps) {
           active: location.pathname.endsWith("/card"),
         }]
         : []),
+      {
+        label: "About & Help",
+        href: about(event?.uid ?? ""),
+        active: location.pathname.endsWith("/about"),
+      },
     ],
     [event?.uid, event?.conference.features, location.pathname],
   );
